@@ -1,0 +1,9 @@
+python-dotenv~=1.0.0
+telebot~=0.0.5
+requests~=2.31.0
+schedule~=1.2.0
+
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
