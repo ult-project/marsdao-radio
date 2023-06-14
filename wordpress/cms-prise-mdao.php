@@ -1,21 +1,28 @@
 <?php
 
+// Variables to define Curl request options
 $url = "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?slug=marsdao";
-
 $curl = curl_init($url);
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
 $headers = array(
   "X-CMC_PRO_API_KEY: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "Accept: application/json",
 );
+
+/*
+Equivalent console command:
+curl -H "X-CMC_PRO_API_KEY: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -H "Accept: application/json" \
+-G https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?slug=marsdao
+*/
+
+// Curl request options
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-// for debug only
+// Set the following options 'true' only for debug
 curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
-$resp = curl_exec($curl);
+$response = curl_exec($curl);
 curl_close($curl);
 
 $data = "data";
@@ -24,7 +31,7 @@ $quote = "quote";
 $usd = "USD";
 $price = "price";
 
-$json = json_decode($resp, true);
+$json = json_decode($response, true);
 $mdao = $json[$data][$id][$quote][$usd][$price];
 echo round($mdao, 4);
 
