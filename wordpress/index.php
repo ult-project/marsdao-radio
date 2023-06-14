@@ -1,4 +1,3 @@
-
 # Display current song (update in 1 minute)
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <span style="font-weight:bold">Current song:</span>
@@ -52,6 +51,17 @@
   setInterval(getStats, timeout * 1000);
 </script>
 
+# Display $MDAO crypto currency prise from the CoinMarketCap
+<dev>
+  <a href="https://coinmarketcap.com/currencies/marsdao" title="CoinMarketCap: $MDAO" target="_blank">$MDAO</a>:
+  <?php get_template_part('cms-prise','mdao') ?>
+</dev>
+
+# Display $COSMIC crypto currency prise from the CoinMarketCap
+<dev>
+  <a href="https://coinmarketcap.com/currencies/cosmic-fomo" title="CoinMarketCap: $COSMIC" target="_blank">$COSMIC</a>:
+  <?php get_template_part('cms-prise','cosmic') ?>
+</dev>
 
 # Copy the text by click
 <style>
