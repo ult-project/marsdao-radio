@@ -1,4 +1,6 @@
 .idea
 
+liquidsoap/radio.conf
+
 telegram-bot/config.env
 telegram-bot/google_calendar.json
