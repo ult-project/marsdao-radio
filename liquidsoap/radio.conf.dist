@@ -3,7 +3,7 @@
 
 # Icecast
 icecast_host        = 'https://onair.example.com'
-icecast_port        = 8080
+icecast_port        = 80
 icecast_user        = 'source'
 icecast_password    = 'secret'
 icecast_name        = 'Some name of radio station'
@@ -11,7 +11,7 @@ icecast_description = 'Some description about the radio station'
 icecast_url         = 'https://onair.example.com'
 
 # Broadcast
-onair_port     = 8081
+onair_port     = 8000
 onair_user     = 'source'
 onair_password = 'secret'
 
