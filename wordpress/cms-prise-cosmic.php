@@ -1,9 +1,5 @@
 <?php
 
-/*
-
-*/
-
 // Variables to define Curl request options
 $url = "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?slug=cosmic-fomo";
 $curl = curl_init($url);
