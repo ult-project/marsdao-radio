@@ -43,7 +43,7 @@ function getCoinPrice($slug, $id) {
   if (isset($json['data'][$id]['quote']['USD']['price'])) {
     $price_usd = $json['data'][$id]['quote']['USD']['price'];
 	$price_formatted = number_format($price_usd, 4);
-    return round($price_formatted, 4);
+    return $price_formatted;
   } else {
     return 'null'; // return null if cryptocurrency data not found
   }
