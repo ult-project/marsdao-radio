@@ -1,4 +1,5 @@
 <?php
+  // set the error handler to catch issues
   set_error_handler(function ($level, $message, $file = '', $line = 0) {
     throw new ErrorException($message, 0, $level, $file, $line);
   });
@@ -30,12 +31,13 @@
         }
   }
 
+  // if the request successfully completed
   try {
-    print(getMp3StreamTitle('https://onair.example.com/live', 443));
+    print(getMp3StreamTitle('https://onair.example.com/live', 443)); // replace with your Icecast2 stream URL
   }
 
+  // if the request returns an error
   catch (Throwable $e) {
     echo '<span style="color:#ff7831;">radio stream unavailable</span>';
   }
-
 ?>

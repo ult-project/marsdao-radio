@@ -12,7 +12,7 @@
       setInterval(refreshDiv, 60000);
     });
   </script>
-  <div id="refresh"><?php get_template_part('radio', 'function') ?></div>
+  <div id="refresh"><?php get_template_part('functions/icecast', 'parser') ?></div>
 </span>
 
 
@@ -54,13 +54,13 @@
 # Display $MDAO crypto currency prise from the CoinMarketCap
 <dev>
   <a href="https://coinmarketcap.com/currencies/marsdao" title="CoinMarketCap: $MDAO" target="_blank">$MDAO</a>:
-  <?php get_template_part('cms-prise','mdao') ?>
+  <?php $cmc_prise_mdao = getCoinPrice('marsdao', 18913); echo $cmc_prise_mdao; ?>
 </dev>
 
 # Display $COSMIC crypto currency prise from the CoinMarketCap
 <dev>
   <a href="https://coinmarketcap.com/currencies/cosmic-fomo" title="CoinMarketCap: $COSMIC" target="_blank">$COSMIC</a>:
-  <?php get_template_part('cms-prise','cosmic') ?>
+  <?php $cmc_prise_cosmic = getCoinPrice('cosmic-fomo', 24993); echo $cmc_prise_cosmic; ?>
 </dev>
 
 # Copy the text by click
