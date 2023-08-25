@@ -73,3 +73,6 @@ Streaming from the Icecast2 server **live** mount endpoint to the Telegram live 
       **Refresh token** value.
 
 5. Rename **google_calendar.json.dist** file to **google_calendar.json** and update with secrets.
+
+You can read the full article (russian) related to setting up the **Google Calendar credentials** in my blog:
+https://profinch.ru/google-cloud-platform/google-calendar-api-oauth
