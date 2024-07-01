@@ -5,6 +5,7 @@
 Telegram bot designed to interact with an Icecast2 server to stream the live mount endpoint to the Telegram group live
 video chat and manage the radio station infrastructure.
 
+[update] We found some issues with logs - fixing...
 
 # Features
 Streaming from the Icecast2 server **live** mount endpoint to the Telegram live video chat.
